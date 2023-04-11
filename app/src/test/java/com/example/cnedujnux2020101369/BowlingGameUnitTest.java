@@ -70,4 +70,12 @@ public class BowlingGameUnitTest {
         game.roll(10);
     }
 
+    @Test
+    public void fifth_test()
+    {
+        repeatedRoll(10,12);
+        assertEquals(300,game.score());
+    }
+
+
 }
