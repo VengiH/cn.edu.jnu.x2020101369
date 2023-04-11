@@ -44,12 +44,16 @@ public class BowlingGameUnitTest {
     @Test
     public void third_test()
     {
-        game.roll(4);
-        game.roll(6);
+        rollASpare();
         game.roll(7);
         game.roll(1);
-        repeatedRoll(0,16);
-        assertEquals(26,game.score());
+        repeatedRoll(0,17);
+        assertEquals(25,game.score());
+    }
+
+    private void rollASpare() {
+        game.roll(4);
+        game.roll(6);
     }
 
 
