@@ -33,11 +33,23 @@ public class BowlingGameUnitTest {
         assertEquals(20,game.score());
     }
 
-    private void repeatedRoll(int pin, int times) {
+    private void repeatedRoll(int pin, int times)
+    {
         for (int i = 0;i < times;i++)
         {
             game.roll(pin);
         }
+    }
+
+    @Test
+    public void third_test()
+    {
+        game.roll(4);
+        game.roll(6);
+        game.roll(7);
+        game.roll(1);
+        repeatedRoll(0,16);
+        assertEquals(26,game.score());
     }
 
 
