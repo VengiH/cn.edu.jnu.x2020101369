@@ -78,5 +78,4 @@ public class BowlingGameUnitTest {
         assertEquals(285,game.score());
     }
 
-
 }

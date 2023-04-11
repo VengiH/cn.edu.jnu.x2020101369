@@ -11,6 +11,7 @@ public class BowlingGame {
 
     public int score() {
         int totalScore = 0;
+        int strike_num = 0;
         for(int scoreIndex = 0;scoreIndex < pins.length;scoreIndex++)
         {
             totalScore += pins[scoreIndex];
@@ -19,10 +20,17 @@ public class BowlingGame {
                 if (isaSpare(scoreIndex)) {
                     totalScore += pins[scoreIndex + 2];
                 }
-                if (isaStrike(scoreIndex)) {
+                if (isaStrike(scoreIndex) && strike_num < 10) {
                     totalScore += pins[scoreIndex + 1];
                     totalScore += pins[scoreIndex + 2];
+                    strike_num ++;
                 }
+
+                if (strike_num >= 10)
+                {
+                    totalScore -= pins[scoreIndex+1];
+                }
+
             }
         }
         return totalScore;
