@@ -47,7 +47,7 @@ public class BowlingGameUnitTest {
         rollASpare();
         game.roll(7);
         game.roll(1);
-        repeatedRoll(0,17);
+        repeatedRoll(0,16);
         assertEquals(25,game.score());
     }
 
