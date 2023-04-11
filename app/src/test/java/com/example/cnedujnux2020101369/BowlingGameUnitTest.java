@@ -56,5 +56,18 @@ public class BowlingGameUnitTest {
         game.roll(6);
     }
 
+    @Test
+    public void fourth_test()
+    {
+        rollAStrike();
+        game.roll(4);
+        game.roll(1);
+        repeatedRoll(0,16);
+        assertEquals(20,game.score());
+    }
+
+    private void rollAStrike() {
+        game.roll(10);
+    }
 
 }
