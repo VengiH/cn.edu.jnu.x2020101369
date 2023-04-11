@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="111dp"
         android:layout_height="44dp"
         android:text="请输入"
@@ -22,30 +23,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="确认"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="93dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="130dp"
         android:layout_height="66dp"
         android:text="总分："
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="268dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="184dp"
+        android:layout_width="191dp"
         android:layout_height="55dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.127"
-        tools:layout_editor_absoluteX="72dp"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
