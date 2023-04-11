@@ -19,6 +19,10 @@ public class BowlingGame {
                 if (isaSpare(scoreIndex)) {
                     totalScore += pins[scoreIndex + 2];
                 }
+                if (isaStrike(scoreIndex)) {
+                    totalScore += pins[scoreIndex + 1];
+                    totalScore += pins[scoreIndex + 2];
+                }
             }
         }
         return totalScore;
@@ -26,5 +30,8 @@ public class BowlingGame {
 
     private boolean isaSpare(int scoreIndex) {
         return 10 == pins[scoreIndex] + pins[scoreIndex + 1];
+    }
+    private boolean isaStrike(int scoreIndex) {
+        return 10 == pins[scoreIndex];
     }
 }
