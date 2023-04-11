@@ -73,8 +73,9 @@ public class BowlingGameUnitTest {
     @Test
     public void fifth_test()
     {
-        repeatedRoll(10,12);
-        assertEquals(300,game.score());
+        repeatedRoll(10,10);
+        repeatedRoll(5,2);
+        assertEquals(285,game.score());
     }
 
 
